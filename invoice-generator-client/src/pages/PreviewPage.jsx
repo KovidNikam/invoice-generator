@@ -1,13 +1,14 @@
 import { templates } from "@assets/assets";
 import { AppContext } from "context/AppContext";
 import { useContext, useRef } from "react";
+import { preview } from "vite";
 
 const PreviewPage = () => {
   const PreviewRef = useRef();
   const { selectedTemplate } = useContext(AppContext);
 
   return (
-    <div className="container-fluid d-flex flex-column p-3 min-vh-100">
+    <div className="previewpage container-fluid d-flex flex-column p-3 min-vh-100">
       <div className="d-flex flex-column align-items-center mb-4 gap-3">
         <div className="d-flex gap-2 flex-wrap justify-content-center">
           {templates.map(({ id, label }) => (
@@ -29,6 +30,15 @@ const PreviewPage = () => {
             <button className="btn btn-info">Send Email</button>
             <button className="btn btn-success d-flex align-items-center justify-content-center">Download PDF</button>
         </div>
+      </div>
+
+      <div className="flex-grow-1 overflow-auto d-flex justify-content-center align-items-start bg-light py-3">
+        <div ref={PreviewRef} className="invoice-preview">
+            Display the pdf preview
+        </div>
+
+
+        
       </div>
     </div>
   );
