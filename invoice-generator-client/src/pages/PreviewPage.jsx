@@ -1,6 +1,6 @@
-import { templates } from "@assets/assets";
-import InvoicePreview from "@components/InvoicePreview";
-import { AppContext } from "context/AppContext";
+import { templates } from "../assets/assets";
+import InvoicePreview from "../components/InvoicePreview";
+import { AppContext } from "../context/AppContext";
 import { useContext, useRef } from "react";
 import { preview } from "vite";
 
