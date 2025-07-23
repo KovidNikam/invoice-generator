@@ -23,7 +23,11 @@ const PreviewPage = () => {
         </div>
 
         <div className="d-flex flex-wrap justify-content-center gap-2">
-          {/* Additional content here if needed */}
+            <button className="btn btn-primary d-flex align-items-center justify-content-center"></button>
+            <button className="btn btn-danger">Delete Invoice</button>
+            <button className="btn btn-secondary">Back to Dashboard</button>
+            <button className="btn btn-info">Send Email</button>
+            <button className="btn btn-success d-flex align-items-center justify-content-center">Download PDF</button>
         </div>
       </div>
     </div>
