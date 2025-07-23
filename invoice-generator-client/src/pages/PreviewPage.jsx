@@ -1,11 +1,12 @@
 import { templates } from "@assets/assets";
+import InvoicePreview from "@components/InvoicePreview";
 import { AppContext } from "context/AppContext";
 import { useContext, useRef } from "react";
 import { preview } from "vite";
 
 const PreviewPage = () => {
   const PreviewRef = useRef();
-  const { selectedTemplate } = useContext(AppContext);
+  const { selectedTemplate, invoiceData} = useContext(AppContext);
 
   return (
     <div className="previewpage container-fluid d-flex flex-column p-3 min-vh-100">
@@ -34,7 +35,7 @@ const PreviewPage = () => {
 
       <div className="flex-grow-1 overflow-auto d-flex justify-content-center align-items-start bg-light py-3">
         <div ref={PreviewRef} className="invoice-preview">
-            Display the pdf preview
+          <InvoicePreview invoiceData={invoiceData} template={selectedTemplate}/>
         </div>
 
 
