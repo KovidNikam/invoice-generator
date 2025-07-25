@@ -4,10 +4,12 @@ import { useContext, useState } from "react";
 import InvoiceForm from "../components/InvoiceForm.jsx";
 import TemplateGrid from "../components/TemplateGrid.jsx";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const MainPage=()=>{
 
     const [isEditingTitle, setEditingTitle] = useState(false);
+    const navigate = useNavigate();
     const {invoiceTitle, setInvoiceTitle, invoiceData, setInvoiceData, setSelectedTemplate} = useContext(AppContext);
 
     // To save which template user selected
@@ -21,7 +23,9 @@ const MainPage=()=>{
             toast.error("Please enter quantity and amount for all items.");
             return;
         }
+        
         setSelectedTemplate(templateId);
+        navigate('/preview');
     }
 
     const handleTitleChange = (e) => {
