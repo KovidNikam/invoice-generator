@@ -7,7 +7,6 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const MainPage=()=>{
-
     const [isEditingTitle, setEditingTitle] = useState(false);
     const navigate = useNavigate();
     const {invoiceTitle, setInvoiceTitle, invoiceData, setInvoiceData, setSelectedTemplate} = useContext(AppContext);

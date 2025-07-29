@@ -30,15 +30,15 @@ const Menubar = () => {
                     </Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link fw-medium" to="/dashboard">
-                        Dashboard
+                <Link className="nav-link fw-medium" to="/generate">
+                        Generate
                     </Link>
                 </li>
                 {/* to go to main page using generate...use link tag insted of button  */}
                 <li className="nav-item">
-                    <button className="nav-link fw-medium btn-link" to="/generate">
-                        Generate
-                    </button> 
+                <Link className="nav-link fw-medium" to="/dashboard">
+                        Dashboard
+                    </Link>
                 </li>
                 <li className="nav-item">
                     <button className="btn btn-primary rounded-pill px-4">

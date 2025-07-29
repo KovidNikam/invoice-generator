@@ -1,15 +1,15 @@
-import { templates } from "../assets/assets";
-import InvoicePreview from "../components/InvoicePreview";
-import { AppContext } from "../context/AppContext";
+import { templates } from "../assets/assets.js";
+import InvoicePreview from "../components/InvoicePreview.jsx";
+import { AppContext } from "../context/AppContext.jsx";
 import { useContext, useRef } from "react";
-import { preview } from "vite";
+// import { preview } from "vite";
 
-const PreviewPage = () => {
+  const PreviewPage = () => {
   const PreviewRef = useRef();
   const { selectedTemplate, invoiceData} = useContext(AppContext);
 
   return (
-    <div className="previewpage container-fluid d-flex flex-column p-3 min-vh-100">
+    <div className="container-fluid d-flex flex-column p-3 min-vh-100">
       <div className="d-flex flex-column align-items-center mb-4 gap-3">
         <div className="d-flex gap-2 flex-wrap justify-content-center">
           {templates.map(({ id, label }) => (
@@ -37,9 +37,6 @@ const PreviewPage = () => {
         <div ref={PreviewRef} className="invoice-preview">
           <InvoicePreview invoiceData={invoiceData} template={selectedTemplate}/>
         </div>
-
-
-        
       </div>
     </div>
   );
