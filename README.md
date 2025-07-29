@@ -5,7 +5,7 @@ This is a full-stack Invoice Generator project built using modern web developmen
 ## 📦 Getting Started
 
 ### 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/invoice-generator.git
+git clone https://github.com/KovidNikam/invoice-generator.git
 cd invoice-generator/invoice-generator-client
 ### 2. Install dependencies
 npm install
